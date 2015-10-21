@@ -8,6 +8,7 @@ To code Real Time Personalization (RTP) technology into apps, developers may [re
 Contents
 =========================================
 * Introduction
+* Example
 * Installation
 * Configuration
 * Troubleshooting
@@ -17,6 +18,13 @@ Contents
 Introduction
 =========================================
 The File Selector is code that provides a straightforward file selector for apps that use Sequencing.com's Real-Time Personalization technology. Using this code, apps will have the ability to display the genetic data files from the app user's Sequencing.com account and allow the app user to select one of the files for the app to use when providing genetically tailored content.
+
+Example
+======================================
+What types of apps can you personalize with Real-Time Personalization technology? Any type of app... even a weather app. 
+* The open source [Weather My Way +RTP app](https://github.com/SequencingDOTcom/Weather-My-Way-RTP-App/) differentiates itself from all other weather apps because it uses app chains to provide genetically tailored content in real-time to each app user.
+* Experience it yourself using one of the fun sample genetic data files. These sample files are provided for free to all apps that use app chains.
+* Uses the File Selector code from this repo.
 
 Installation
 ======================================
