@@ -22,14 +22,14 @@ Installation
 ======================================
 The code is provided in various coding languages. App developers can cut and paste the code into their apps so that their apps have a file selector that works straight out-of-the-box.
 
-The file selector depends on Bootstrap (included in this repo) and [jQuery 1.11.3+](https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js). 
+The file selector depends on [Bootstrap](https://github.com/SequencingDOTcom/File-Selector-code/tree/master/bootstrap) and [jQuery 1.11.3+](https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js). 
 * Include both of these dependencies prior to using the file selector. 
 
 Review [index.html](https://github.com/SequencingDOTcom/File-Selector-code/blob/master/index.html) for example code to initiate the file selector.
 
 *Installation steps*
 
-1) Include bootstrap and [jquery](https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js)
+1) Include [Bootstrap](https://github.com/SequencingDOTcom/File-Selector-code/tree/master/bootstrap) and [jquery](https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js)
 
 2) Include file selector JS and CSS files from this repo
  * JA file: sequencing-file-selector.js
@@ -55,7 +55,7 @@ The File Selector code should work straight out-of-the-box without any configura
 
 Other tips
 
-* Ensure that Bootstrap (included in this repo) and [jQuery 1.11.3+](https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js) are included.
+* Ensure that [Bootstrap](https://github.com/SequencingDOTcom/File-Selector-code/tree/master/bootstrap) and [jQuery 1.11.3+](https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js) are included.
    
 * [Developer Documentation](https://sequencing.com/developer-documentation/)
 
