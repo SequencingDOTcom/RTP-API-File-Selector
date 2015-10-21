@@ -17,7 +17,9 @@ Contents
 
 Introduction
 =========================================
-The File Selector is code that provides a straightforward file selector for apps that use Sequencing.com's Real-Time Personalization technology. Using this code, apps will have the ability to display the genetic data files from the app user's Sequencing.com account and allow the app user to select one of the files for the app to use when providing genetically tailored content.
+The File Selector is code that provides a straightforward file selector for apps that use Sequencing.com's Real-Time Personalization technology. 
+
+Using this code, apps will have the ability to display the genetic data files from the app user's Sequencing.com account and allow the app user to select one of the files for the app to use when providing genetically tailored content.
 
 Example
 ======================================
