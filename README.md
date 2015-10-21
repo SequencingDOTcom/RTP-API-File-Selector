@@ -55,7 +55,7 @@ The File Selector code should work straight out-of-the-box without any configura
 
 Other tips
 
-* Ensure that [Bootstrap](https://github.com/SequencingDOTcom/File-Selector-code/tree/master/bootstrap) and [jQuery 1.11.3+](https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js) are included.
+* Ensure that [Bootstrap](https://github.com/SequencingDOTcom/File-Selector-code/tree/master/bootstrap) and [jQuery 1.11.3+](https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js) are installed.
    
 * [Developer Documentation](https://sequencing.com/developer-documentation/)
 
