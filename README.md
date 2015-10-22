@@ -17,7 +17,7 @@ Contents
 
 Introduction
 =========================================
-The File Selector is code that provides a straightforward file selector for apps that use Sequencing.com's Real-Time Personalization technology. 
+The File Selector is JavaScript code that provides a straightforward file selector for apps that use Sequencing.com's Real-Time Personalization technology. 
 
 Using this code, apps will have the ability to display the genetic data files from the app user's Sequencing.com account and allow the app user to select one of the files for the app to use when providing genetically tailored content.
 
@@ -30,7 +30,7 @@ What types of apps can you personalize with Real-Time Personalization technology
 
 Installation
 ======================================
-The code is provided in various coding languages. App developers can cut and paste the code into their apps so that their apps have a file selector that works straight out-of-the-box.
+The code is provided in JavaScript and will work with any server side language for all modern web browsers. App developers can cut and paste the code into their apps so that their apps have a file selector that works straight out-of-the-box.
 
 The file selector depends on [Bootstrap](https://github.com/SequencingDOTcom/File-Selector-code/tree/master/bootstrap) and [jQuery 1.11.3+](https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js). 
 * Include both of these dependencies prior to using the file selector. 
@@ -42,7 +42,7 @@ Review [index.html](https://github.com/SequencingDOTcom/File-Selector-code/blob/
 1) Include [Bootstrap](https://github.com/SequencingDOTcom/File-Selector-code/tree/master/bootstrap) and [jquery](https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js)
 
 2) Include file selector JS and CSS files from this repo
- * JA file: sequencing-file-selector.js
+ * JS file: sequencing-file-selector.js
  * CSS file: style.css
 
 3) Create a hidden input in your form: 
@@ -52,7 +52,7 @@ Review [index.html](https://github.com/SequencingDOTcom/File-Selector-code/blob/
 
 4) Initialize the file selector on that form element, using this code: 
 ```
-$('input[type=hidden]').sequencingFileSelector({accessToken: 'the-access-token-for-his-app'});
+$('input[type=hidden]').sequencingFileSelector({accessToken: 'the-oauth2-access-token-for-your-app'});
 ```
 
 Configuration
