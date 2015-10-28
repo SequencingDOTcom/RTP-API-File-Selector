@@ -32,14 +32,24 @@ Screenshots
 <br>
 ![alt tag](https://github.com/SequencingDOTcom/File-Selector-code/blob/master/screenshots/File-Selector-initial-view-Sequencing-com.png "Initial view")
 
-
-**Sample files view**
+**Sample files list**
 * if user selects 'I want to select a sample file' then the list of sample files will appear
 * user can select one file
-* that genetic data in that file will then be used to provide personalized content to the app
 <br>
 <br>
 ![alt tag](https://github.com/SequencingDOTcom/File-Selector-code/blob/master/screenshots/File-Selector-sample-file-view-Sequencing-com.png "Sample files")
+
+**File selected**
+* user selected sample file 'Sheila'
+* that genetic data in that file will then be used to provide personalized content to the app
+* sample files allow user to experience Real-Time Personalization even if they don't yet have their own genetic data
+<br>
+<br>
+![alt tag](https://github.com/SequencingDOTcom/File-Selector-code/blob/master/screenshots/File-Selector-file-selected-view-Sequencing-com.png "User selected sample file 'Sheila'")
+
+
+
+
 
 Installation
 ======================================
