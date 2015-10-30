@@ -18,7 +18,7 @@ SequencingFileSelector = function(formElement, options) {
   options = options || {};
   options = $.extend({
     accessToken: '',
-    serverURL: 'https://da.sequencing.com',
+    serverURL: 'https://api.sequencing.com',
     method: 'DataSourceList'
   }, options);
   if (!options.accessToken) {
