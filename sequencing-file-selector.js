@@ -99,7 +99,7 @@ SequencingFileSelector.prototype.fetchFiles = function() {
       if (data.length == 0 && dataObject.uploaded) {
         // If uploaded files of this user are empty, switch to the
         // sample ones.
-        obj.switch.find('input[value=sample]').prop('checked', true).trigger('change');
+        obj.switch.find(':input[name=sample]').trigger('click');
         obj.switch.after($('<div></div>').addClass('alert').addClass('alert-info')
           .append($('<p></p>').text("Your Sequencing.com account doesn't appear to have any genetic data."))
           .append($('<p></p>').text("Please go to the Upload Center at Sequencing.com to upload your genetic data. You'll then be able to connect this app with your genetic data."))
