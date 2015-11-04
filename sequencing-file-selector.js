@@ -19,11 +19,15 @@ SequencingFileSelector = function(formElement, options) {
   options = $.extend({
     accessToken: '',
     serverURL: 'https://api.sequencing.com',
-    method: 'DataSourceList'
+    method: 'DataSourceList',
+    fileNameElement: $()
   }, options);
   if (!options.accessToken) {
     // We need access token to continue.
     return;
+  }
+  if (!(options.fileNameElement instanceof $)) {
+    options.fileNameElement = $();
   }
 
   this.formElement = formElement;
@@ -33,9 +37,15 @@ SequencingFileSelector = function(formElement, options) {
 
   this.switch = $('<div></div>').addClass('sequencing-file-selector-type-control');
   var button = $('<button name="sample"></button>').addClass('btn').addClass('btn-custom').html('I want to use<br />a sample file');
+  button.click(function(e) {
+    e.preventDefault();
+  });
   this.switch.append(button);
   this.switch.append($('<span></span>').addClass('or').text('or'));
   var button = $('<button name="uploaded"></button>').addClass('btn').addClass('btn-custom').html('I want to use<br />my own file');
+  button.click(function(e) {
+    e.preventDefault();
+  });
   this.switch.append(button);
 
   var obj = this;
@@ -81,6 +91,7 @@ SequencingFileSelector.prototype.populateFiles = function(files) {
 SequencingFileSelector.prototype.fetchFiles = function() {
   var obj = this;
   this.files = [];
+  this.unselect();
   this.table.find('tbody').html('');
   this.table.addClass('loading');
 
@@ -121,14 +132,34 @@ SequencingFileSelector.prototype.unselect = function(except) {
       this.files[i].unselect();
     }
   }
-  this.val('');
+  this.val({});
 }
 
 /**
  * Set or get current value of the file selector.
  */
-SequencingFileSelector.prototype.val = function(newValue) {
-  return this.formElement.val(newValue);
+SequencingFileSelector.prototype.val = function(selectedFile) {
+  var returnValue;
+  if (selectedFile.Id) {
+    returnValue = this.formElement.val(selectedFile.Id);
+    if (this.options.fileNameElement.size() > 0) {
+      for (var i = 0; i < this.files.length; i++) {
+        if (this.files[i].file.Id == selectedFile.Id) {
+          var name = $('<div></div>').append(this.files[i].fileName());
+          name = name.text();
+
+          this.options.fileNameElement.val(name);
+        }
+      }
+    }
+  }
+  else {
+    returnValue = this.formElement.val('');
+    if (this.options.fileNameElement.size() > 0) {
+      this.options.fileNameElement.val('');
+    }
+  }
+  return returnValue;
 };
 
 /**
@@ -237,7 +268,7 @@ SequencingFileSelectorRow.prototype.rowClicked = function(e) {
     this.fileSelector.unselect(this);
     this.button.prop('checked', true);
     this.row.addClass('selected');
-    this.fileSelector.val(this.file.Id);
+    this.fileSelector.val(this.file);
   }
 };
 
