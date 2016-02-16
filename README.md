@@ -82,9 +82,11 @@ Instructions & Endpoints
 ======================================
 https://api.sequencing.com/DataSourceList?all=true
 
-This repo contains the code snippet for a File Selector. When added to your app code, the File Selector will allow an app user to view and select from a list of files securely stored in the user's Sequencing.com account all while using your app.
+This repo contains the code snippet for a File Selector. When added to your app code, the File Selector will allow your app to display a list of files securely stored in the user's Sequencing.com account. Your app user will also be able to use your app to select a file. The selected file will then be used by Sequencing.com whenever your app makes an API request to Sequencing.com.
 
-While using Sequencing.com, a user has the ability to store files in different folders. If the app user has files stored at Sequencing.com, this File Selector allows an app to display the app user's files. It also allows the user to select a file to be used when the app sends Sequencing.com an API request. Sequencing.com will then process the API request using the genetic data from the file that the user selected when using this File Selector in your app. 
+While using Sequencing.com, a user has the ability to store genetic data files (files that contain data about the user's genes) in different folders. 
+* If the app user has files stored at Sequencing.com, this File Selector allows an app to display the app user's files. It also allows the user to select a file to be used when the app sends Sequencing.com an API request. Sequencing.com will then process the API request using the genetic data from the file that the user selected when using this File Selector in your app.
+* If the app user does not have files stored at Sequencing.com, this File Selector allows your app to display [fun sample files](https://sequencing.com/knowledge-center/sample-files) provided by Sequencing.com. When using your app, your app user will be able to select one of these sample files and Sequencing.com will then use that sample file data to process all API requests received from your app for that app user.
 
 The user only has to select a file once and thereafter all API requests to Sequencing.com will indicate that this specific file should be used. The user should also have the ability to select a different file at any time. Once a different file is selected, the newly selected file will be used by Sequencing.com to process all incoming API requests from your app.
 
