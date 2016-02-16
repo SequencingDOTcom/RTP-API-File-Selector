@@ -10,7 +10,7 @@ Contents
 * Introduction
 * Screenshots
 * Installation
-* Configuration
+* Instructions & Endpoints
 * Troubleshooting
 * Example App
 * Maintainers
@@ -78,10 +78,34 @@ Review [index.html](https://github.com/SequencingDOTcom/File-Selector-code/blob/
 $('input[type=hidden]').sequencingFileSelector({accessToken: 'the-oauth2-access-token-for-your-app'});
 ```
 
-Configuration
+Instructions & Endpoints
 ======================================
-There are no strict configurations that have to be performed.
+https://api.sequencing.com/DataSourceList?all=true
 
+This repo contains the code snippet for a File Selector. When added to your app code, the File Selector will allow an app user to view and select from a list of files securely stored in the user's Sequencing.com account all while using your app.
+
+While using Sequencing.com, a user has the ability to store files in different folders. If the app user has files stored at Sequencing.com, this File Selector allows an app to display the app user's files. It also allows the user to select a file to be used when the app sends Sequencing.com an API request. Sequencing.com will then process the API request using the genetic data from the file that the user selected when using this File Selector in your app. 
+
+The user only has to select a file once and thereafter all API requests to Sequencing.com will indicate that this specific file should be used. The user should also have the ability to select a different file at any time. Once a different file is selected, the newly selected file will be used by Sequencing.com to process all incoming API requests from your app.
+
+To learn more about Sequencing.com's API, please see our [App Chains](https://github.com/SequencingDOTcom/App-Chains-Sequencing.com-Real-Time-API) repo.
+
+The default settings for the File Selector will populate the File Selector with all user's files from all of the user's folders at Sequencing.com. If you do not want to use this default setting, you may modify the following endpoints to specify that only files from specific folders should appear in the file selector. If a folder is excluded from an endpoint then the app will not receive any information about files in that folder.
+
+| Folder | Endpoint | Code |
+| --- | --- | --- |
+| All folders | all=true | https://api.sequencing.com/DataSourceList?all=true 
+| My uploaded files | uploaded=true | https://api.sequencing.com/DataSourceList?uploaded=true
+| Files shared with me | shared=true | https://api.sequencing.com/DataSourceList?shared=true
+| Files saved from my apps | fromApps=true | https://api.sequencing.com/DataSourceList?fromApps=true
+| My uploaded files & Files shared with me | uploaded=true&shared=true | https://api.sequencing.com/DataSourceList?uploaded=true&shared=true |
+| My uploaded files & Files saved from my apps | uploaded=true&fromApps=true | https://api.sequencing.com/DataSourceList?uploaded=true&fromApps=true |
+
+The File Selector will display files from all of the user's folders using either of the following endpoints (they both return the same information):
+* https://api.sequencing.com/DataSourceList?all=true
+* https://api.sequencing.com/DataSourceList?uploaded=true&shared=true&fromApps=true
+
+ 
 Troubleshooting
 ======================================
 The File Selector code should work straight out-of-the-box without any configuration requirements or issues. 
