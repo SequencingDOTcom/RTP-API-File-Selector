@@ -1,5 +1,4 @@
 # File Selector
-=========================================
 Code for adding a File Selector to apps that use [Sequencing.com's](https://sequencing.com/) [Real Time Personalization (RTP)](https://sequencing.com/developer-documentation/what-is-real-time-personalization-rtp) technology. This code is opensource and free to use, share, build upon and improve.
 
 To code Real Time Personalization (RTP) technology into apps, developers may [register for a free account](https://sequencing.com/user/register/) at Sequencing.com. App development with RTP is free.
